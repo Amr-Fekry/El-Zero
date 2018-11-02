@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Border properties</title>
+        <style>
+            div {
+                background-color: #DDD;
+                padding: 10px;
+                margin: 10px auto;
+                width: 300px;
+            }
+            .a {
+                border-width: 1px 2px 4px 8px;
+                border-style: solid dashed ridge dotted;
+                border-color: red blue green yellow;
+            }
+            .b {
+                border-width: 1px 2px;
+                border-style: solid dashed;
+                border-color: red blue;
+            }
+            .c {
+                border-left: 2px dashed green;
+            }
+            .d {
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="a">
+            This is a div with a border
+        </div>
+        <div class="b">
+            This is a div with a border
+        </div>
+        <div class="c">
+            This is a div with a border
+        </div>
+        <div class="d">
+            This is a div with a border
+        </div>
+    </body>
+</html>
+
+<!--
+border properties:
+
+border-width: the width of all four sides (top,right,bottom,left) of the border.
+default value: 0px (no border)
+other values: thin, medium, thick, or be more precise (in pixels).
+
+numbers of values specified for width: (a, v h, t h b, t r b l) rule:
+
+border-width: a px
+a: will be considered the value for all sides of the border.
+
+border-width: v px h px
+v: will be considered the value for top and bottom sides (vertical)
+h: will be considered the value for right and left sides (horizontal)
+
+border-width: t px h px b px
+t: the value for top side
+h: will be considered the value for right and left sides (horizontal)
+l: the value for left side
+
+border-width: t px r px b px l px
+t: the value for top side
+r: the value for right side
+b: the value for bottom side
+l: the value for left side
+_____________________
+
+border-style:
+default value: none
+other values:
+solid, dotted, dashed, double, groove vs ridge, inset vs outset, ..  (explore them)
+hidden: used with hover to show up the border with out slightly changing its position. (hidden or color: transparent)
+
+numbers of values specified for style follows (a, v h, t h b, t r b l) rule.
+_____________________
+
+border-color: colors explained in background lesson.
+
+numbers of values specified for color follows (a, v h, t h b, t r b l) rule.
+_____________________
+
+ONE (short-hand) CODE FOR ALL THREE PROPERTIES:
+
+border: width style color
+
+or specify properties for only one side of the border:
+border- top/bottom/right/left: width style color
+_____________________
+
+
+
+-->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>iFrame</title>
+        <link rel="" href="">
+        <script></script>
+        <style>
+            iframe {width: 600px; height: 400px; margin: 20px; border: 5px solid red}
+        </style>
+    </head>
+    <body>
+        <iframe name="w3org" src="https://www.w3.org" scrolling="no"></iframe>
+        <iframe name="w3org" src="https://www.w3.org"></iframe>
+        <iframe src="https://www.google.org/" width="" height=""></iframe>
+    </body>
+</html>
+
+<!--
+short for inline frame, famous example : google maps, upload sites.
+
+iframe attributes:
+name: to distinguesh the iframe from other elements.
+
+src: a URL to a webpage to put in the frame.
+
+width & height: to resize the frame. (now done with CSS)
+
+scrolling: (no/yes/auto) "no" to remove the scroll bar from the frame (not supported in html5),
+scroll bar can be removed using CSS (only in firefox) using (overflow:hidden) property.
+for other browsers we have to use scrolling attribute.
+
+
+-->

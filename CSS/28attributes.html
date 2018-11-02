@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Attributes</title>
+        <style>
+            a {
+                color: green;
+            }
+            a[target="_blank"] {
+                color: red;
+            }
+            a[title="three"] {
+                text-decoration: none;
+                cursor: help;
+            }
+            img[title="image2"] {
+                border-radius: 20px;
+            }
+            input {
+                display: block;
+                margin: 10px;
+                padding: 5px;
+            }
+            input[type="search"] {
+                color: #080;
+                /* outline: 3px solid #080; */
+            }
+            input[name="password"] {
+                color: red;
+                /* outline: 3px solid red; */
+            }
+            input[name="user"] {
+                color: blue;
+                /* outline: 3px solid blue; */
+            }
+        </style>
+    </head>
+    <body>
+        <a href="">Google</a> /
+        <a href="#" target="_blank">Another website</a> /
+        <a href="#" title="three">A third website</a> /
+
+        <br><br>
+        <!-- http://placehold.it/size/background-color/text-color -->
+        <img src="http://placehold.it/100/F00/FFF" title="image1" alt="placeholder">
+        <img src="http://placehold.it/100/00F/FFF" title="image2" alt="placeholder">
+        <img src="http://placehold.it/100/080/FFF" title="image3" alt="placeholder">
+
+        <input type="text" name="user">
+        <input type="password" name="password">
+        <input type="search" name="search">
+    </body>
+</html>
+
+<!--
+we can select an html element to style using one of its attributes,
+this also save us th e excess use of classes and ids.
+
+a[x="value"] : select all elements of type a that has an attribute x="value"
+
+-->

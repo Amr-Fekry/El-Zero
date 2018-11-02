@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Anchor properties</title>
+        <style>
+            /* normal state of the link */
+            a.one {
+                color: blue;
+                text-decoration: none; /* to remove the underline */
+                font-size: 50px;
+            }
+            /* when we hover over the link */
+            a.one:hover {
+                color: red;
+                font-weight: bold;
+            }
+            /* when we click the link (and hold it) */
+            a.one:active {
+                color: green;
+                text-decoration: overline;
+            }
+            /* a:visited doesn't work on modern browsers for security reasons (look up why) */
+
+            /* have some fun */
+            a.two {
+                text-decoration: none; /* to remove the underline */
+                font-size: 50px;
+                display: block;
+                letter-spacing: -6px;
+            }
+
+            .G {color: blue}
+            .o1 {color: red}
+            .o2 {color: orange}
+            .g {color: blue}
+            .l {color: green}
+            .e {color: red}
+
+            .two:hover .G {color: red}
+            .two:hover .o1 {color: blue}
+            .two:hover .o2 {color: red}
+            .two:hover .g {color: orange}
+            .two:hover .l {color: blue}
+            .two:hover .e {color: green}
+
+            .two:active .G {color: green}
+            .two:active .o1 {color: red}
+            .two:active .o2 {color: blue}
+            .two:active .g {color: red}
+            .two:active .l {color: orange}
+            .two:active .e {color: blue}
+        </style>
+    </head>
+    <body>
+        <a class="one" href="https://www.google.com" target="_blank">Google</a>
+
+        <a class="two" href="https://www.google.com" target="_blank">
+            <span class="G">G</span>
+            <span class="o1">o</span>
+            <span class="o2">o</span>
+            <span class="g">g</span>
+            <span class="l">l</span>
+            <span class="e">e</span>
+        </a>
+    </body>
+</html>

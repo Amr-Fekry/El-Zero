@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Float</title>
+        <style>
+            .left {
+                width: 300px;
+                background-color: blue;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+                float: left;
+            }
+            .right {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="left">
+            this is a float: left; div1
+        </div>
+        <div class="left">
+            this is a float: left; div2
+        </div>
+        <div class="left right"> <!-- that's how we make two classes for one element -->
+            this is a float: right; div3
+        </div>
+
+        <!-- Important to clear your float -->
+        <div style="clear:both"></div>
+
+        <hr>
+
+        <div class="left">
+            how to use float <span class="right">views: 600</span>
+        </div>
+
+        <div style="clear:both"></div>
+
+        <hr>
+
+        <div class="left right">
+            this is a float: left; div1
+        </div>
+        <div class="left">
+            this is a float: left; div2
+        </div>
+        <div class="left right">
+            this is a float: right; div3
+        </div>
+
+        <div style="clear:both"></div>
+
+        <hr>
+    </body>
+</html>
+
+<!--
+float property make the elements flow in the workflow.
+default value: none
+other values:
+left: makes the elements flow starting from the left.
+right: makes the elements flow starting from the left.
+
+float makes the element take the width of children instead of parent. (if width is not set)
+float makes a chiled get out of a parent leaving parent height = 0
+
+(float: left/right) surpasses (direction:ltr/rtl) in that:
+with (float: left/right) we can place elements in on both directions on the same line / row / level.
+while with (direction:ltr/rtl) each line / row / level can only take one direction.
+
+float also allows for splitting text to both sides of a container. unlike text-align that puts all the text to one side.
+
+after using float on a specific section of the page we need to stop it some how to start a new section without float.
+to stop a float, we create a <div style="clear:both"></div> and give it a style property called clear.
+
+clear property ends float property for a specific section and has value of:
+clear: right: if our float is right.
+clear: left: if our float is left.
+clear: both: if we used the two types of float.
+-->

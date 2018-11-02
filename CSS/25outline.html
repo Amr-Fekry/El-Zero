@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Outline</title>
+        <style>
+            div {
+                background-color: #DDD;
+                width: 320px;
+                height: 120px;
+            }
+            .bigger {
+                padding: 10px;
+                border: 5px solid red;
+            }
+            .same {
+                margin: 10px;
+                outline: 5px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bigger">
+            initial width: 320px <br>
+            height: 120px <br>
+            padding: 10px <br>
+            border: 5px solid red <br>
+            after padding and border div width becomes 350px
+        </div>
+        <div class="same">
+            initial width: 320px <br>
+            height: 120px <br>
+            margin: 10px <br>
+            outline: 5px solid green <br>
+            after margin and outline div width is still 320px
+        </div>
+    </body>
+</html>
+
+<!--
+(Outline) is exactly the same property as (border) and takes same values in the same way,
+BUT, with only one difference:
+- space used by outline is not added to the space of the element (like margin)
+- while space used by border (like padding) is added to the space of the element (becomes a part of the element)
+
+This information is usefull for advanced CSS.
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Box model</title>
+        <style>
+            .container {
+                width: 800px;
+                margin: 10px auto;
+                padding: 10px;
+                background-color: blue;
+            }
+            .child {
+                background-color: red;
+                color: white;
+                margin: 10px;
+                padding: 10px;
+                width: 400px;
+            }
+            p {
+                background-color: green;
+                color: white;
+                margin: 10px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="child">
+                This is our box model
+            </div>
+            <p>This is our paragraph</p>
+        </div>
+    </body>
+</html>
+
+<!--
+we can construct our site with a container div inside of which
+are block elements (div, section, paragraph, etc) that can be style differently using CSS.
+-->

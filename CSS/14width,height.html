@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Dimensions: width & height</title>
+        <style>
+            .parent {
+                background-color: #DDD;
+                width: 600px;
+            }
+            .child1 {
+                background-color: teal;
+            }
+            .child2 {
+                background-color: #F90;
+                width: 400px;
+            }
+            .parent2 {
+                background-color: #DDD;
+                min-width: 800px;
+            }
+            .parent3 {
+                background-color: teal;
+                min-width: 500px;
+            }
+            .parent4 {
+                background-color: #DDD;
+                max-width: 400px;
+            }
+            .parent5 {
+                background-color: #999;
+                max-width: 600px;
+            }
+            img {
+                width: 100%;
+            }
+
+            .height {
+                background-color: #DDD;
+            }
+            .child3 {
+                background-color: orange;
+                width: 200px;
+                height: 200px;
+            }
+
+            .parent6 {
+                background-color: #DDD;
+                width: 200px;
+                margin-left: 20px;
+                min-height: 100px;
+                max-height: 200px;
+                float: left;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- width -->
+        <div class="parent">
+            this is a a parent div with background-color: #DDD; width: 600px;
+            <div class="child1">
+                this is a child div with background-color: teal; (taking the full width of the parent)
+            </div>
+            <div class="child2">
+                this is another child div with background-color: teal; width: 400px;
+            </div>
+        </div>
+        <br><br>
+
+        <!-- height -->
+        <div class="height">
+            this parent div is taking the full height of the child
+            <div class="child3">
+                this is a child div with background-color: teal; width: 200px; height: 200px;
+            </div>
+        </div>
+        <br><br>
+
+        <!-- min & max width -->
+        <div class="parent2">
+            min-width: 800px;
+            this text will stop wrapping around when screen is less than 800px. this text will stop wrapping around when screen is less than 800px. this text will stop wrapping around when screen is less than 800px.
+        </div>
+        <br>
+        <div class="parent3">
+            min-width: 600px;
+            this text will stop wrapping around when screen is less than 600px. this text will stop wrapping around when screen is less than 600px. this text will stop wrapping around when screen is less than 600px.
+        </div>
+        <br>
+        <div class="parent4">
+            max-width: 400px;
+            <br>
+            this text wil wrap around when it reaches 400px. this text wil wrap around when it reaches 400px. this text wil wrap around when it reaches 400px.
+        </div>
+        <br>
+        <div class="parent5">
+            div max-width: 200px;
+            <br>
+            image width:100%;
+            <img src="../html/steve.jpg" alt="">
+        </div>
+        <br>
+        <div class="parent5">
+            div max-width: 200px;
+            <br>
+            image width:100%;
+            <img src="../html/images/jobs.jpg" alt="">
+        </div>
+        <br><br>
+
+        <!-- min & max height -->
+        <div class="parent6">
+            min-height: 100px; <br>
+            max-height: 200px; <br>
+            hieght <br>
+            hieght <br>
+        </div>
+        <div class="parent6">
+            min-height: 100px; <br>
+            max-height: 200px; <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+        </div>
+        <div class="parent6">
+            min-height: 100px; <br>
+            max-height: 200px; <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+            hieght <br>
+        </div>
+
+    </body>
+</html>
+
+<!--
+dimensions properties:
+
+width: default value: auto: takes the complete width of the parent by default.
+height: default value: auto: takes the height of the children by default.
+
+other values:
+value in pixel: fixed width/height for the element and doesn't respond to screen size
+value in percentage: relative to the parent. used in reponsive design.
+
+also used in responsive design:
+
+min-width: gives the element an initial width (useful with buttons)
+width of element can shrink down to adapt to screen width but cannot shrink less than min-width.
+
+max-width: width of element can shrink down to adapt to screen width but cannot extend more than max-width.
+width of children of the element will adapt to be less than or equal to the max-width.
+- text will wrap around.
+- image with 100% width will take the max-width.
+
+min-height: gives the element an initial height regardless the height of the children.
+height of element can shrink down to adapt to screen height but cannot shrink less than min-height.
+
+max-height: height of element can shrink down to adapt to screen height but cannot extend more than max-height.
+-->

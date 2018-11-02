@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lists properties</title>
+        <style>
+            ul {
+                list-style-type: georgian;
+            }
+            ol li {
+                border: 1px solid black
+            }
+            ol {
+                border: 1px solid black;
+                list-style-position: inside;
+            }
+            .two {
+                list-style-image: url("bulletpoint.png");
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            list-style-type
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+        <ol>
+            list-style-position
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ol>
+        <ul class="two">
+            list-style-type
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+    </body>
+</html>
+
+<!--
+lists properties:
+
+list-style-type: type of the shapes that marks the list items
+default value for ul: disc: the round bullets.
+default value for ol: decimal: numbers.
+other values: try the values from suggestions.
+if you want to reset a list use {list-style-type:none; margin:0; padding:0}
+__________________________
+
+list-style-position: position of the shapes that marks the list items
+default value: outside (if we make a border for the items they will be outside the border)
+other values: inside (moves them inside the border "the space of the item")
+__________________________
+
+list-style-image: replaces the shapes with an external image.
+default value: none
+other value: url("PATH-TO-IMAGE")
+image size must be small to fit a the size of the bullet point (it may need to be resized first)
+list-style-image overrides list-style-type
+__________________________
+
+ONE CODE FOR ALL LIST-STYLE PROPERTIES??
+
+list-style: type position image
+default values:
+list-style: disc/decimal outside none
+image overrides type
+-->

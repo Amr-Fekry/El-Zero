@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Overflow (CSS2)</title>
+        <style>
+            .visible, .hidden, .scroll {
+                background-color: #DDD;
+                padding: 10px;
+                margin-left: 10px;
+                width: 120px;
+                height: 120px;
+                float: left;
+            }
+            .visible {
+                overflow: visible;
+            }
+            .hidden {
+                overflow: hidden;
+            }
+            .scroll {
+                overflow: scroll;
+            }
+            p {
+                padding: 10px;
+                float: right;
+            }
+            .float {
+                background-color: #0B0;
+                margin-top: 200px;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="visible">
+            overflow: visible; <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+        </div>
+        <div class="hidden">
+            overflow: hidden; <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+        </div>
+        <div class="scroll">
+            overflow: scroll; <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+        </div>
+        <div class="scroll">
+            overflow: scroll; <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+            ThisistextThisistext <br>
+        </div>
+        <div class="scroll">
+            overflow: scroll; <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+            This is text <br>
+        </div>
+
+        <div class="clear" style="clear:both"></div>
+
+        <div class="float">
+            <p>this is a paragraph</p>
+            <p>this is a paragraph</p>
+            <p>this is a paragraph</p>
+        </div>
+        <div>
+            <h1>heading</h1>
+            <h1>heading</h1>
+            <h1>heading</h1>
+        </div>
+    </body>
+</html>
+<!--
+overflow describes a child (content) that goes outside the a parent element (workflow) containing it.
+default value: visible: overflow can be seen.
+
+other values:
+
+hidden: hides the overflow and it can never be seen (like it doesn't exist)
+
+scroll: adds horizontal and vertical scrolls to parent element so that overflow can be seen.
+(problem: adds the scrolls whether there is an overflow or not. scrolls are inactive (bale) until the overflow exists)
+if content is text: horizontal scroll is not active until there is a word wider than the parent width. otherwise, text will wrap around.
+
+auto: to avoid scroll problem. it only adds scrolls if needed
+____________________________
+
+we can also specify two different types of overflow for the two axis (x,y):
+overflow: hidden scroll
+overflow: scroll hidden
+
+(when we set one value it applies for both axis)
+____________________________
+
+or we can specify overflow for only one axis:
+overflow-x: visible/hidden/scroll/auto
+overflow-y: visible/hidden/scroll/auto
+in this case the other unspecified axis takes a value (auto).
+____________________________
+
+when float is used for a children inside a div for example two things happen:
+children will get out of parent (div) leaving its height = 0
+children will take the width of their children instead of the parent
+to fix this problem we can go to the parent and set (overflow: hidden), now parent will take the height of children and wrap them again .
+this also fixes another problem, which is: we don't have to clear the float of the children before using another section in the page.
+-->

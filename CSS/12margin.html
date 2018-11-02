@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Margin properties</title>
+        <style>
+            * { /* for all elements */
+                margin:0;
+                padding:0;
+            }
+            div {
+                background-color: blue;
+                color: white;
+            }
+            .a {
+                margin: 10px;
+            }
+            .b {
+                margin: 20px 5px;
+            }
+            .c {
+                margin: 10px 20px 30px 40px;
+            }
+            .d {
+                margin-top: 50px;
+                margin-right: 50px;
+                margin-bottom: 5px;
+            }
+            .e {
+                width: 500px;
+                margin:auto;
+            }
+            .f {
+                margin-top: -80px;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="a">
+            This is div (a) has margin: 10px
+        </div>
+        <hr>
+        <div class="b">
+            This is div (b) has margin: 20px 5px;
+        </div>
+        <hr>
+        <div class="c">
+            This is div (c) has margin: 10px 20px 30px 40px;
+        </div>
+        <hr>
+        <div class="d">
+            This is div (d) has margin-top: 50px; margin-right: 50px; margin-bottom: 5px;
+        </div>
+        <hr>
+        <div class="e">
+            This is div (e) has width: 500px; margin:auto;
+        </div>
+        <hr>
+        <div class="f">
+            This is div (f) has margin: -80;
+        </div>
+        <hr>
+    </body>
+</html>
+
+<!--
+margin is an extra empty space sarrounding "outside" of the sides of an element.
+
+margin default value for most elements = 0px
+_____________________
+
+margin follows (a, v h, t h b, t r b l) rule:
+
+numbers of values specified for margin:
+
+margin: a px
+a: will be considered the value for all sides of the border.
+
+margin: v px h px
+v: will be considered the value for top and bottom sides (vertical)
+h: will be considered the value for right and left sides (horizontal)
+
+margin: t px h px b px
+t: the value for top side
+h: will be considered the value for right and left sides (horizontal)
+l: the value for left side
+
+margin: t px r px b px l px
+t: the value for top side
+r: the value for right side
+b: the value for bottom side
+l: the value for left side
+_____________________
+
+we can also specify margin for one side only:
+margin-top: t px      = margin: t px 0 0 0
+margin-right: r px    = margin: 0 r px 0 0
+margin-bottom: b px   = margin: 0 0 b px 0
+margin-left: l px     = margin: 0 0 0 l px
+_____________________
+
+we can center blocks of specific width using (margin: auto)
+(margin: auto) = (margin:0 auto)
+where h (or right,left) will each take a margin of half the space of the page.
+
+if auto is written as a vlue v (or top,bottom) it will be considered a 0.
+_____________________
+
+margin also takes negative values. (usefull for fixing some problems)
+-->

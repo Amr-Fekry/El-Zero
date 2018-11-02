@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Z-index (CSS2)</title>
+        <style>
+            div {
+                padding: 10px;
+                width: 100px;
+                height: 100px;
+            }
+            .div1 {
+                background: #F00;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .div2 {
+                background: #00F;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+            }
+            .div3 {
+                background: #080;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+            .div4 {
+                background: #F00;
+                position: absolute;
+                top: 10px;
+                left: 200px;
+                z-index: 3;
+            }
+            .div5 {
+                background: #00F;
+                position: absolute;
+                top: 30px;
+                left: 230px;
+                z-index: 2;
+            }
+            .div6 {
+                background: #080;
+                position: absolute;
+                top: 50px;
+                left: 250px;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">Div 1</div>
+        <div class="div2">Div 2</div>
+        <div class="div3">Div 3</div>
+
+        <div class="div4">Div 4</div>
+        <div class="div5">Div 5</div>
+        <div class="div6">Div 6</div>
+    </body>
+</html>
+
+<!--
+Z-index is related to position preperty and it specifies
+(for a group of positioned elements) which element goes on the top and which goes on the bottom.
+default value: auto: takes the same order of elements in html body:
+first element in html body will be at the bottom and last will be on top.
+
+other values: a number: where the element with the heighest number will be on top and lowest will be in bottom.
+-->

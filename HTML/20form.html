@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>Form part 3 (textarea, fieldset-legend, select-option)</title>
+        <style>
+            fieldset {
+                background-color: lightgrey;
+                padding: 10px;
+                border: 1px solid red;
+            }
+            legend {
+                color: black;
+                background-color: grey;
+                border: 1px solid red;
+                padding: 5px;
+            }
+        </style>
+        <link rel="" href="">
+        <script>
+            function sayHello() {
+                alert("Hello HTML");
+            }
+        </script>
+    </head>
+    <body>
+        <form name="register" action="index.html" method="get">
+            <fieldset>
+                <legend>Personal info</legend>
+                <!-- text input -->
+                <label for="">User name</label>
+                <input type="text" name="username" value="" placeholder="Enter your name" maxlength="10">
+
+                <br><br>
+                <!-- password input -->
+                <label for="">Password</label>
+                <input type="password" name="password">
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+                <legend>legend: title of the fieldset</legend>
+
+                <!-- textarea -->
+                <label for="">Your message:</label> <br>
+                <textarea name="area1" rows="8" cols="80">Remove this text then write your message here</textarea> <br>
+                <textarea name="area2" rows="1" cols="80" readonly>this is a readonly text area, you can't edit this text.</textarea>
+
+                <br><br>
+                <!-- file input -->
+                <label for="">Upload your CV</label>
+                <input type="file">
+
+                <br><br>
+                <!-- checkbox input -->
+                <input type="checkbox"> <label for="">remember me</label>
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <!-- radio input -->
+                What's your favorite brawser? <br>
+                <input type="radio" name="brawser" value="Chrome"> <label for="">Chrome</label> <br>
+                <input type="radio" name="brawser" value="Opera"> <label for="">Opera</label> <br>
+                <input type="radio" name="brawser" value="Firefox"> <label for="">Firefox</label> <br>
+
+                What's your favorite mobile? <br>
+                <input type="radio" name="mobile" value="iphone"> <label for="">iphone</label> <br>
+                <input type="radio" name="mobile" value="samsung"> <label for="">samsung</label> <br>
+                <input type="radio" name="mobile" value="HTC"> <label for="">HTC</label> <br>
+            </fieldset>
+
+            <br><br>
+            <!-- hidden input -->
+            <input type="hidden" value="testing">
+
+            <fieldset>
+                <legend>Buttons</legend>
+                <!-- select-options -->
+                <select name="time">
+                    <optgroup label="near future:">
+                        <option value="minute">in a minute</option>
+                        <option value="hour">in an hour</option>
+                        <option value="day">in a day</option>
+                    </optgroup>
+                    <optgroup label="far future:">
+                        <option value="week">in a week</option>
+                        <option value="month">in a month</option>
+                        <option value="year">in a year</option>
+                    </optgroup>
+                </select>
+
+                <!-- submit input -->
+                <input type="submit" value="Sign in">
+                <!-- button input -->
+                <input type="button" name="say hello" value="say hello" onclick="sayHello()">
+                <!-- reset input -->
+                <input type="reset" value="clear inputs">
+            </fieldset>
+            <br><br>
+            <!-- image input -->
+            <input type="image" src="https://placehold.it/100/100" alt="Submit">
+
+        </form>
+    </body>
+</html>
+
+<!--
+see the last part of form first
+
+<textarea> is a space for the user to write a chunk of text.
+attributes:
+rows: how many rows to display before using a side bar (a way for sizing the text area vertically)
+cols: how many characters to display in on row (a way for sizing the text area horiontally)
+CSS is usually used instead to style the size of the textarea.
+name: name of the variable that will be sent to the back-end with value = the text the user will input.
+
+<textarea></textarea> we text we put between the tags will be displayed inside the text area.
+if we used the readonly attribute the text between the tags will not be editable, and the textarea porpuse will be to display this text only.
+readonly attribute in textarea can be changed later using JS (upon user click on a button for example).
+
+
+<fieldset> is used to group html elements in a nice box where <legend> is the box title.
+
+
+<select> is a dropdown list from which the user will choose one option
+<select name="">: name is the name of a variable that will be sent to the back-end
+<option value="">: value is the value of the variable that will be sent to the back-end
+
+<select> attributes:
+name:
+disabled: to disable the functionality temporarily. could be bcz the option will be generated based on other input field for example.
+size="integer": how many options user can see at a time.
+multiple: allows user to select (using Ctrl) more than one option.
+
+<option> attributes:
+value:
+disabled: to disable the functionality.
+selected: to select an option automatically until the user change to another option. (as a suggestion maybe)
+
+
+<optgroup> is used to group options in shorter sections.
+attributes:
+disabled: to disable the functionality.
+label: the title for a group.
+-->

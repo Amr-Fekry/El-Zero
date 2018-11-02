@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Selectors</title>
+        <style>
+            #parent {
+                background-color: #DDD;
+                padding: 10px;
+            }
+            #parent p {
+                /* controls all direct and indirect children p inside #parent */
+                background-color: yellow;
+                color: black;
+            }
+            #parent>p {
+                /* controls all direct children p inside #parent */
+                color: green;
+            }
+            #parent div {
+                /* controls all direct and indirect children div inside #parent */
+                background-color: red;
+                color: #FFF;
+                padding: 10px;
+                margin: 10px;
+            }
+            aside {
+                background-color: green;
+                color: #FFF;
+                padding: 10px;
+                margin: 10px;
+            }
+            #parent aside>div {
+                /* controls all direct children div inside all children aside inside #parent */
+                background-color: blue;
+                color: red;
+            }
+            #parent > * {
+                border: 1px dashed black;
+            }
+            #parent .second p+div {
+                /* select all elements div that are directly next to a sibling element p that are inside all elements .second that are inside #parent  */
+                border: 1px solid white;
+            }
+            #parent p+p {
+                /* select all elements p that are directly next to a sibling element p */
+                background-color: orange;
+            }
+            #parent>.p~div {
+                /* select all elements div that come after sibling elements p that are directly inside #parent*/
+                outline: 5px solid yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+            This is the parent div
+            <aside>
+                This is a child aside 1
+                <p>This is a grand child paragraph 1</p>
+                <div>
+                    This is a grand child div 1
+                    <p>This is a grand grand child paragraph 2</p>
+                    <div>This is a grand grand child div 1</div>
+                </div>
+            </aside>
+            <p>This is a child paragraph 1</p>
+            <p>This is a child paragraph 2</p>
+            <div>This is a child div 1</div>
+            <div>This is a child div 2</div>
+            <aside class="second">
+                This is a child aside 1
+                <p>This is a grand child paragraph 1</p>
+                <div>
+                    This is a grand child div 1
+                    <p>This is a grand grand child paragraph 2</p>
+                    <div>This is a grand grand child div 1</div>
+                </div>
+            </aside>
+            <p>This is a child paragraph 1</p>
+            <p class="p">This is a child paragraph 2</p>
+            <div>This is a child div 1</div>
+            <div>This is a child div 2</div>
+        </div>
+    </body>
+</html>
+
+<!--
+operators between selectors are used to save excessive use of classes and ids.
+
+selectors has operators used between tag names, classes, ids that meen different things:
+
+direct and indirect children: space operator ( ):
+(a b): select all direct and indirect children b inside parent a
+
+direct chiled: greater-than operator (>):
+(a>b): select all direct children b inside parent a
+
+all elements: star (*):
+(a>*): all direct children inside parent a
+
+direct next-sibling: plus operator (+):
+(a+b): select all elements b that are directly next to sibling elements a
+
+all siblings come after: tilde operator (~):
+(a~b): select all elements b that come after sibling elements a
+
+take overriding into consideration when dealing with selectors (it is usually the problem)
+the more specific a selector is, the more it will override.
+-->

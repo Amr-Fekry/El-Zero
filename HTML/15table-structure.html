@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>Table part 2 (thead, tbody, tfoot)</title>
+        <style>
+            table, td {
+                border: 1px solid black
+            }
+            table {
+                width: 500px;
+                border-collapse: collapse;
+            }
+            thead td {
+                font-weight:bold;
+                text-align: center;
+                color:white;
+                background-color: black;
+                padding: 5px;
+            }
+            tfoot td {
+                font-weight:bold;
+                text-align: center;
+                color:red;
+                background-color: lightgrey;
+                padding: 5px;
+            }
+            tbody td {
+                text-align: center;
+                padding: 5px;
+                background-color:#EFEFEF;
+            }
+        </style>
+        <link rel="" href="">
+        <script></script>
+    </head>
+    <body>
+        <table>
+            <caption>Hosting Plans</caption>
+            <thead>
+                <tr>
+                    <td>Features</td>
+                    <td>Plan 1</td>
+                    <td>Plan 2</td>
+                    <td>Plan 3</td>
+                    <td>Plan 4</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hard Disk</td>
+                    <td>20GB</td>
+                    <td>30GB</td>
+                    <td>40GB</td>
+                    <td>50GB</td>
+                </tr>
+                <tr>
+                    <td>Databases</td>
+                    <td>5 DBs</td>
+                    <td>6 DBs</td>
+                    <td>7 DBs</td>
+                    <td>8 DBs</td>
+                </tr>
+                <tr>
+                    <td>FTPs</td>
+                    <td>3 FTB</td>
+                    <td>4 FTB</td>
+                    <td>5 FTB</td>
+                    <td>6 FTB</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Price</td>
+                    <td>50$</td>
+                    <td>60$</td>
+                    <td>70$</td>
+                    <td>80$</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+
+
+<!--
+we use thead, tbody, tfoot to style different parts of table differently
+without the need of classes and complicated CSS selectors.
+
+thead always appears as the first row of table no matter where you put in html,
+tfoot always appears as the last row of table no matter where you put in html,
+as long as both are inside the table tag.
+
+tbody allows for a scroll bar if the rows are too many to appear in the current window.
+-->

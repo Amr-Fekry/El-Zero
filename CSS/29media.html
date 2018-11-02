@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Media</title>
+        <link rel="stylesheet" href="" media="">
+        <style>
+            @media screen {
+                .screen {
+                    color: red;
+                    font-size: 40px;
+                }
+            }
+            @media print {
+                .print {
+                    color: red;
+                    font-size: 40px;
+                }
+            }
+            @media all {
+                .all {
+                    color: blue;
+                    font-size: 40px;
+                }
+            }
+        </style>
+        <!--  OR:
+        <style media="screen">
+            .screen {
+                color: red;
+                font-size: 40px;
+            }
+        </style>
+        <style media="print">
+            .print {
+                color: red;
+                font-size: 40px;
+            }
+        </style>
+        <style media="all">
+            .all {
+                color: blue;
+                font-size: 40px;
+            }
+        </style>
+        -->
+    </head>
+    <body>
+        <p class="screen">This is a paragraph. it is styled on screen but it you try to print it, it will not be style.</p>
+
+        <p class="print">This is a paragraph. it is not styled on screen but it you try to print it, it will be style.</p>
+
+        <p class="all">This is a paragraph. it is styled on both screen and printer.</p>
+    </body>
+</html>
+
+<!--
+Media is used to style the webpage differently for different screens and devices.
+
+Media is specified inside the link tag for the CSS file for external stylesheets,
+or inside the style tag for internal stylesheets.
+We can also write styles for different media in the same external stylesheet (file),
+or the same intrenal sheet (style tag), using media query method:
+@media media1 {style1}
+@media media2 {style2}
+etc
+
+default value: all
+if media is not specified, the style applies ot all types of screens and devices.
+
+some media values:
+screen: style is only for viewing on screens.
+print: style is only for when printing the page.
+
+there are plenty of media values. explore them in the editor.
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>Form part 2 (button, file, image, reset, radio)</title>
+        <style>
+
+        </style>
+        <link rel="" href="">
+        <script>
+            function sayHello() {
+                alert("Hello HTML");
+            }
+        </script>
+    </head>
+    <body>
+        <form name="register" action="index.html" method="get">
+
+            <!-- text input -->
+            <label for="">User name</label>
+            <input type="text" name="username" value="" placeholder="Enter your name" maxlength="10">
+
+            <br><br>
+            <!-- password input -->
+            <label for="">Password</label>
+            <input type="password" name="password">
+
+            <br><br>
+            <!-- file input -->
+            <label for="">Upload your CV</label>
+            <input type="file">
+
+            <br><br>
+            <!-- checkbox input -->
+            <input type="checkbox"> <label for="">remember me</label>
+
+            <br><br>
+            <!-- radio input -->
+            What's your favorite brawser? <br>
+            <input type="radio" name="brawser" value="Chrome"> <label for="">Chrome</label> <br>
+            <input type="radio" name="brawser" value="Opera"> <label for="">Opera</label> <br>
+            <input type="radio" name="brawser" value="Firefox"> <label for="">Firefox</label> <br>
+
+            What's your favorite mobile? <br>
+            <input type="radio" name="mobile" value="iphone"> <label for="">iphone</label> <br>
+            <input type="radio" name="mobile" value="samsung"> <label for="">samsung</label> <br>
+            <input type="radio" name="mobile" value="HTC"> <label for="">HTC</label> <br>
+
+            <br><br>
+            <!-- hidden input -->
+            <input type="hidden" value="testing">
+
+            <!-- submit input -->
+            <input type="submit" value="Sign in">
+            <!-- button input -->
+            <input type="button" name="say hello" value="say hello" onclick="sayHello()">
+            <!-- reset input -->
+            <input type="reset" value="clear inputs">
+
+            <br><br>
+            <!-- image input -->
+            <input type="image" src="https://placehold.it/100/100" alt="Submit">
+
+        </form>
+    </body>
+</html>
+
+<!--
+see the last part of form first
+
+more input types:
+(submit vs button?)
+button: usually used with javascript and event-handlers to perform a JS function.
+submit: sends the form variables and values to the back-end through action attribute.
+
+reset: clears or resets all other form inputs to the default value. text on button can be changed through value attribute.
+
+file: to upload a local file to the webpage and send it to the back-end.
+the text on the button is "Choose a file" and can't be changed through the value attribes for saftey reasons.
+it can be changed though using advanced methods in JS.
+
+image: does the same functionality of the submit input of sending the values of other inputs to the back-end,
+but it also sends additional data (x, y) which are the coordinates of the position the user clicked on the image.
+WOW!!
+
+hidden: an input that doesn't appear to the user to interact with, but used to send a specific pre-set value to the back-end along with the user other inputs.
+
+radio: make the user choose only one value from multiple options.
+it chooses only one value (when all your radio input options have the same name attribute.) IMPORTANT!
+-->

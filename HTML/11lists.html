@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>Lists</title>
+        <style>
+
+        </style>
+        <link rel="" href="">
+        <script></script>
+    </head>
+    <body>
+        <!-- Unordered lists -->
+        <h2>Unordered list</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ul>
+
+        <!-- Ordered lists -->
+        <h2>Ordered list</h2>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ol>
+
+        <!-- Ordered list attributes in HTML5 -->
+        <h3>type="A"</h3>
+        <ol type="A">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ol>
+
+        <h3>type="I"</h3>
+        <ol type="I">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ol>
+
+        <h3>start="50"</h3>
+        <ol start="50">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ol>
+
+        <h3>reversed</h3>
+        <ol reversed>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ol>
+
+        <h3>start="10" reversed</h3>
+        <ol start="10" reversed>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ol>
+
+        <!-- Nested Lists -->
+        <h2>Nested lists</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript
+                <ul>
+                    <li>jQuery
+                        <ol type="a">
+                            <li>DOM manipulation</li>
+                            <li>Ajax requests</li>
+                        </ol>
+                    </li>
+                    <li>React.js</li>
+                    <li>Angular.js</li>
+                    <li>Vue.js</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Definition/Description list (dl), Definition term (dt), Definition description (dd) -->
+        <h2>Description list</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Hypertext Markup Language</dd>
+            <dd>Used to build the content of the webpage</dd>
+            <dd>Last version is HTML5</dd>
+
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+            <dd>Adds aesthetics to the webpage</dd>
+            <dd>Last version is CSS3</dd>
+        </dl>
+    </body>
+</html>
+
+<!--
+in HTML5:
+<ol type="A"> makes a list with alphabitical ordering, <ol type="I"> makes a list with romanic ordering.
+<ol start="3"> starts numbering items from 3.
+<ol reversed> numbers items from bottom to top.
+-->

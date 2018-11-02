@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Nesting selectors</title>
+        <style>
+            .one, .two {
+                background-color: #999; /* will override public selector because it is more specific */
+            }
+            .three {
+                background-color: #F50; /* will override public selector because it is more specific */
+            }
+            div {
+                background-color: teal;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+            .one p { /* nesting selctors: get all p children (direct/indirect) in .one */
+                color: green; /* will override public selector because it is more specific */
+            }
+            .two p, .three p { /* grouping and nesting */
+                color: aqua; /* will override public selector because it is more specific */
+            }
+            .four > p {
+                color: yellow; /* will override public selector because it is more specific */
+            }
+            p {
+                color: blue;
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="one">
+            this is div one
+            <p>this is a paragraph</p>
+
+        </div>
+        <div class="two">
+            this is div two
+            <p>this is a paragraph</p>
+        </div>
+        <div class="three">
+            this is div three
+            <p>this is a paragraph</p>
+        </div>
+        <div class="four">
+            this is div four
+            <p>this is a paragraph</p>
+            <div class="five">
+                this is div five
+                <p>this is a paragraph</p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<!--
+we use comma operator for grouping.
+we use space operator for nesting.
+we use > operator for direct nesting.
+-->

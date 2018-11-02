@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Display</title>
+        <style>
+            .block {
+                display: block;
+            }
+            .inline {
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://www.google.com">Google</a>
+        <a href="https://www.google.com">Google</a>
+        <a href="https://www.google.com">Google</a>
+
+        <img src="https://placehold.it/100/100" alt="">
+        <img src="https://placehold.it/100/100" alt="">
+        <img src="https://placehold.it/100/100" alt="">
+
+        <span>this is a span</span>
+        <span>this is a span</span>
+        <span>this is a span</span>
+
+        <h1>This is heading 1</h1>
+        <h1>This is heading 1</h1>
+        <h1>This is heading 1</h1>
+        <span>this is a span</span>
+
+        <p>This is a paragraph</p>
+        <p>This is a paragraph</p>
+        <p>This is a paragraph</p>
+        <span>this is a span</span>
+
+        <div>this is a div</div>
+        <div>this is a div</div>
+        <div>this is a div</div>
+        <div>this is a div</div>
+        <span>this is a span</span>
+
+        <a class="block" href="https://www.google.com">Google</a>
+        <img class="block" src="https://placehold.it/100/100">
+        <span class="block">this is a span</span>
+
+        <h1 class="inline">This is heading 1 (inline)</h1>
+        <p class="inline">This is a paragraph (inline)</p>
+        <div class="inline">this is a div (inline)</div>
+
+    </body>
+</html>
+
+<!--
+Display is a property that describes whether the element takes a complete row of the page (block) or can join other elements on the same row (inline)
+default value: (inline/block) differs between elements:
+some inline elements: anchor, image, span, etc.
+some block elements: headings, paragraph, divs,
+
+to change the default display value for elements:
+
+(display: block) to change diplay value from inline to block.
+(display: inline) to change diplay value from blok to inline.
+(display: inline-block) to change diplay value from block to inline with keeping its block potential of containing other block elements.
+inline-block is usually used for divs.
+(display: none) to hide the element. useful when used with JS where we can (display: block) an element based on an event.
+-->

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>Simple Layout</title>
+        <link rel="" href="">
+        <script></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0; /* remove the built-in margin and padding of the body */
+                font-family: Arial, Tahoma; /* Arial, and Tahoma if Arial is not supported by browser */
+            }
+            .header {
+                background-color: #333;
+                color: #FFF;
+                font-size: 20px;
+                text-align: center;
+                padding: 20px 0; /*20 for top and bottom, 0 for rightand left*/
+            }
+            .navigation {
+                background-color: #DDD;
+                color: #676767;
+                text-align: center;
+            }
+            ul {
+                margin: 0;
+                padding: 0; /* remove the built-in margin and padding of the ul */
+                list-style: none; /* remove the bullets from the list */
+            }
+            ul li {
+                display: inline-block; /* display items horizontally */
+                padding: 10px;
+            }
+
+            .content {
+                text-align: center;
+                padding: 20px 0;
+            }
+            .steve {
+                text-align: justify;
+                font-size: 16px;
+                padding: 20px;
+            }
+            .footer {
+                background-color: #333;
+                color: #FFF;
+                text-align: center;
+                padding: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            Beginners guide to HTML
+        </div>
+        <div class="navigation">
+            <ul>
+                <li>headings</li>
+                <li>paragraph</li>
+                <li>image</li>
+                <li>anchor</li>
+                <li>head-tags</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Steve Jobs</h1>
+            <img src="images/Jobs.jpg" alt="steve">
+            <p class="steve">Steven Paul Jobs was an American inventor, designer and entrepreneur who was the co-founder, chief executive and chairman of Apple Computer. Apple's revolutionary products, which include the iPod, iPhone and iPad, are now seen as dictating the evolution of modern technology. Born in 1955 to two University of Wisconsin graduate students who gave him up for adoption, Jobs was smart but directionless, dropping out of college and experimenting with different pursuits before co-founding Apple with Steve Wozniak in 1976. Jobs left the company in 1985, launching Pixar Animation Studios, then returned to Apple more than a decade later. Jobs died in 2011 following a long battle with pancreatic cancer.</p>
+        </div>
+        <div class="footer">
+            Copyrights &copy; 2018
+            <br>
+            All rights reserved to Amr &reg; team.
+        </div>
+    </body>
+</html>

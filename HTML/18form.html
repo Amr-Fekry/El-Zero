@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>Form part 1 (label, input-text, input-password, checkbox, input-submit)</title>
+        <style>
+
+        </style>
+        <link rel="" href="">
+        <script></script>
+    </head>
+    <body>
+        <form name="register" action="index.html" method="post">
+            <label for="">User name</label>
+            <input type="text" name="username" value="" placeholder="Enter your name" maxlength="10">
+
+            <br>
+
+            <label for="">Password</label>
+            <input type="password" name="username">
+
+            <br>
+
+            <input type="checkbox"> <label for="">remember me</label>
+
+            <br>
+
+            <input type="submit" value="Sign in">
+        </form>
+    </body>
+</html>
+
+<!--
+form attributes:
+name: to identify the form and do stuff with it in CSS, JS, etc.
+action: the file or page or route to send the form data to (form data are values for form variables).
+method: use the form data in a specific way (get or post)
+
+<label> is used as a mark or title to identify an <input>
+
+<input> represents a form variable that gets its value from user before sending it to the back-end.
+
+input attributes:
+type: text, password, checkbox, submit.
+name: gives a name to the variable so we can recognize it at the back-end.
+value: gives a value to the variable, but we don't usually set a vlue to the input and get it from the user instead.
+placeholder: instructions for the user for the type of data to input. can be used instead of the label tag.
+maxlength: maximum number of characters.
+
+<input type="submit" value=""> shows a button with a default text on it "Submit".
+we can change the text on the button through the value attribute.
+-->

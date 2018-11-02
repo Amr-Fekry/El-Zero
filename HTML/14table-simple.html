@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="description of the website">
+        <title>Table part 1 (table, tr, td, th, caption)</title>
+        <style>
+            table {
+                width: 400px;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            caption {
+                color: blue;
+                font-weight: bold;
+            }
+            td {
+                text-align: center;
+            }
+        </style>
+        <link rel="" href="">
+        <script></script>
+    </head>
+    <body>
+        <table>
+            <caption>My web skills</caption>
+            <tr>
+                <th>Date\skill</th>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>Javascript</th>
+                <th>Python</th>
+            </tr>
+            <tr>
+                <td>November</td>
+                <td>50%</td>
+                <td>40%</td>
+                <td>20%</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>October</td>
+                <td>60%</td>
+                <td>50%</td>
+                <td>30%</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>December</td>
+                <td>70%</td>
+                <td>55%</td>
+                <td>40%</td>
+                <td>50%</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!--
+table has some styling attributes but they are not supported by HTML5 anymore, and substituted by CSS
+ex: <table border="1" width="400px" align="center">
+
+caption is a title for the table
+
+<th> is used for the heading cells of the table, it is basically a <td> with additional styling (bold, centered)
+-->

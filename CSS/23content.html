@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Content (CSS)</title>
+        <style>
+            div::after {
+                content: "after div";
+                font-weight: bold;
+                color: blue;
+            }
+            div {
+                color: red;
+            }
+            div::before {
+                content: "before div";
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            This is div.
+        </div>
+    </body>
+</html>
+
+<!--
+content property is related to (::before, ::after) pseudo-elements.
+and it is used to add content to an element using CSS.
+default value: none (no content)
+
+content can take special characters like "\21d2" an arrow.  
+
+any styling inside an elemnt will apply to it and to any pseudo-elements connected.
+but, any styling inside a pseudo-element will only apply to its content.
+
+if there is a styling conflect, styling of pseudo-element will override because it is more specific.
+-->

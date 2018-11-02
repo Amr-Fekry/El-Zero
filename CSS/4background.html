@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>background properties</title>
+        <style>
+            .one {
+                background-color: red
+
+            }
+            .two {
+                width: 600px;
+                height: 800px;
+                border: 1px solid black;
+                background-image: url("../html/steve.jpg");
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: bottom;
+                background-position: 13% 10%;
+
+                /*
+                ONE CODE
+                background: image repeat attachment position color
+                default values:
+                background: none repeat scroll 0% 0% transparent
+                */
+                background: url("../html/steve.jpg") no-repeat scroll 35% 80% red;
+                background: no-repeat red url("../html/steve.jpg") scroll 35% 80%;
+                background: no-repeat red scroll top url("../html/steve.jpg");
+                /* order doesn't matter but preferred */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="one">
+            this is our div
+        </div>
+
+        <div class="two">
+            this is our div
+        </div>
+    </body>
+</html>
+<!--
+colors in CSS are written by:
+
+name: we can choose from 140 predefined colors using its name (red)
+
+hexadecimal-code: specifying the Red-Green-Blue values in hexadecimal (#FF0000).
+if every couple digits are the same, we can write it as (#F00)
+
+rgb(binary): specifying the Red-Green-Blue values in binary rgb(255,0,0)
+
+rgba(binary): specifying the Red-Green-Blue-alpha values in binary rgbrgb(255,0,0,0.0)
+alpha value specifies the opacity degree of the color. (between 0 and 1)
+_____________________
+every CSS property has a default value: background-color: transparent, background-image: none, etc.
+_____________________
+
+background properties:
+
+background-color: set a color using one way as above.
+_____________________
+
+background-image: url("") set exteral URL or internal path to image.
+image will be repeated to cover all space of the element.
+_____________________
+
+background-repeat: controls the repetition of the bachground-image.
+default value: repeat: repeats the image horizontally and vertically.
+other values: repeat-x: only repeats the image horizontally.
+              repeat-y: only repeats the image vertically.
+              no-repeat: only puts on copy of the image in the background.
+_____________________
+
+background-attachment: controls whether to attach the image to the screen or to the page.
+default value: scroll: attaches the image to the page where it will scroll up and down with the page.
+other values: fixed: attaches the image to the screen where it always be displayed regardless the scrolling.
+_____________________
+
+background-position: controls the position of the image in the div containing it.
+default value: top left: top left corner of the div. (= left top)
+other values:  top right: top right corner of the div. (= right top)
+               bottom left: bottom left corner of the div. (= left bottom)
+               bottom right: bottom right corner of the div. (= right bottom)
+               top: center of top row of the div. (= top center = center top {center is assumed})
+               bottom: center of bottom row of the div. (= bottom center = center bottom {center is assumed})
+               left: left of center row of the div. (= center left = left center {center is assumed})
+               right: right of center row of the div. (= center right = right center {center is assumed})
+               center: center of center row of the div. (= center center {center is assumed})
+other method: using percentages for (x,y) where (0% 0%) = (top left), (50% 50%) = center.
+percentages are used when we need more positioning precesion.
+// IMPRTANT: position is related to attachment. //
+in scroll, position is relative to the div. in fixed, position is relative to the screen.
+_____________________
+
+ONE CODE FOR ALL BACKGROUND PROPERTIES??
+
+background: image repeat attachment position color
+background: none repeat scroll 0 0 transparent
+-->

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Text properties</title>
+        <style>
+            body {
+                direction: ltr;
+            }
+            div {
+                width: 300px;
+                background-color: #DDD;
+                margin: 10px 0;
+                padding: 10px;
+            }
+
+            /* color, direction, letter-spacing, word-spacing, line-height, text-align */
+            .en {
+                color: #00F;
+                direction: ltr;
+                letter-spacing: 2px;
+                word-spacing: 10px;
+                line-height: 20px;
+                text-align: justify;
+            }
+
+            /* direction */
+            .rtl {
+                width: 100%;
+                background-color: transparent;
+                direction: rtl;
+            }
+            .ltr {
+                background-color: transparent;
+                direction: ltr;
+            }
+            .ar {
+                direction: rtl;
+            }
+
+            /* text-decoration */
+            .decore {
+                text-decoration: none;
+            }
+            a {
+                text-decoration: overline;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            span.del {
+                color: red;
+                text-decoration: line-through;
+            }
+
+            /* text-indent */
+            .indent {
+                direction: ltr;
+                text-indent: 40px;
+            }
+
+            /* text-transform */
+            span.cap{
+                text-transform: capitalize;
+            }
+            span.upper {
+                text-transform: uppercase;
+            }
+            span.lower {
+                text-transform: lowercase;
+            }
+
+            /* white-space */
+            span.wrap {
+                white-space: normal;
+            }
+            span.nowrap {
+                white-space: nowrap;
+            }
+            .hidden {
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+
+        Explains color, direction. letter-spacing, line-height, word-spacing, text-align <br>
+        <div class="en">This is a normal English text. This is a normal English text. This is a normal English text. This is a normal English text. This is a normal English text.</div>
+
+        <div class="rtl">
+            <div class="ltr">
+                <br><br>
+                Explains direction <br>
+                <div class="ar">
+                    بسم الله  الرحمن الرحيم
+                </div>
+            </div>
+        </div>
+        <br><br>
+        Explains text-decoration <br>
+        <div class="decore">
+            Click <a href="https://www.google.com">here</a> to go to <span class="del">wrong</span> google.
+        </div>
+
+        <br><br>
+        Explains text-indent <br>
+        <div class="indent">
+            This is an indented text
+        </div>
+
+        <br><br>
+        Explains text-transform <br>
+        <div class="trans">
+            <span class="cap">This is a capitalized text</span><br>
+            <span class="upper">This is lowercased and was uppercased using css</span><br>
+            <span class="lower">THIS IS UPPERCASED AND WAS LOWERCASED USING CSS</span><br>
+        </div>
+
+        <br><br>
+        Explains white-space <br>
+        <div>
+            <span class="wrap">This is a normal English text. This is a normal English text.</span>
+            <span class="nowrap">This is a normal English text. This is a normal English text.</span>
+        </div>
+        <div class="hidden">
+            This is a normal English text. This is a normal English text.
+        </div>
+    </body>
+</html>
+
+<!--
+text properties:
+
+color: explaind in background lesson.
+_________________
+
+direction: default value follows the attributes specified in <html lang="en" dir="ltr">
+values are ltr: left-to-right language, rtl: right-to-left language
+direction is not only used for text but to position the contents of the webpage as well.
+the only value from CSS2 here. (all are from CSS1)
+_________________
+
+letter-spacing: to specify the space between letters (in pixels). default value: normal (= 0px)
+also takes negative values.
+_________________
+
+word-spacing: to specify the space between words (in pixels). default value: normal (= 0px)
+also takes negative values.
+_________________
+
+line-height: to specify the space between lines (in pixels or percentage or em). default value: normal
+_________________
+text-align: default value follows the direction
+values: left, right, center, justify (adds spaces to make the text cover the width of the div)
+_________________
+
+text-decoration: add a decoration to text. default value: none
+other values:
+underline: adds aline under the text.
+equivalent to old <ins></ins> tags. default decoration for anchor links.
+overline: adds a line over the text.
+line-through: adds a line through the text.
+equivalent to old <del></del> tags.
+_________________
+
+text-indent: to set the indentation of the text (in pixels or percentage). default value: normal
+_________________
+
+text-transform: transforms the text in some way. default value: none
+other values:
+capitalize: capitalizes the first letter or each word.
+uppercase: transforms all letters to uppercase.
+(it's recommended to wrtie all html page in lower case and uppercasing with this property.)
+lowercase: transforms all letters to lowercase.
+_________________
+
+white-space: sets the wraping of text in side the div. default value: normal
+normal: makes text wrap when it reaches end of div.
+nowrap: makes text continues (overflows) in one line ignoring end of div.
+(overflow: hidden) is used to hide the overflowing part of element.
+-->

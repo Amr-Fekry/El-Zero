@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Visibility</title>
+        <style>
+            .a {
+                background-color: #DDD;
+                padding: 10px;
+                margin: 10px;
+                float: left;
+            }
+            .visiblity:active {
+                visibility: hidden;
+            }
+            .display:active {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="a visiblity">
+            this is the first div with (visiblity:hidden).
+            <br>
+            click to activate property
+        </div>
+        <div class="a">
+            this is the second div
+        </div>
+        <div class="a display">
+            this is the third div with (display:none).
+            <br>
+            click to activate property
+        </div>
+        <div class="a">
+            this is the fourth div
+        </div>
+
+        <div style="clear:left"></div>
+
+        <hr>
+
+        <p>
+            (visibilty: hidden) : hides an element but keeping its place in the workflow.
+            <br>
+            (display: none) : hides an element and removing its place from workflow.
+        </p>
+
+    </body>
+</html>
+
+<!--
+visibility controls the visibilty of an element.
+default value: visible.
+other value: hidden: hides the element from the page.
+recall we also can use (display: none) to hide an element from the page,
+but the two properties are different from each other:
+(visibilty: hidden) : hides an element but keeping its place in the workflow.
+(display: none) : hides an element and removing its place from workflow.
+-->

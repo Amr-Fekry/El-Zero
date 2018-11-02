@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Syntax</title>
+        <style>
+            p { /* styles all <p> elements */
+                color: red;
+            }
+            .p1 { /* styles all elements with class "p1" */
+                color: blue;
+            }
+            #two { /* styles that one element with id "two" */
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="p1">Paragraph one</p>
+
+        <p class="p1" id="two">Paragraph two</p>
+
+        <p class="p2">Paragraph three</p>
+    </body>
+</html>
+
+<!--
+CSS selectors: public tag name, class, id
+classes override public tag names, and ids override classes (id > class > public tag name)
+
+for the same selector, a lower sheet (in the page) overrides sheets written earlier.
+this applies for the external links as well. any repeated sheets in two style links, the sheet in the lower link will override the other one.
+that's why we must place (bootstrap) style link before our own link, so that we can override any bootstrap property we want.
+
+internal stylesheets overrides external stylesheets, inline stylesheets override internal stylesheets.
+(inline stylesheets > internal stylesheets > external stylesheets)
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Padding properties</title>
+        <style>
+            * { /* for all elements */
+                margin:0;
+                padding:0;
+            }
+            div {
+                background-color: teal;
+                color: white;
+            }
+            .a {
+                padding: 10px;
+            }
+            .b {
+                padding: 20px 30px;
+            }
+            .c {
+                padding: 10px 20px 30px 40px;
+            }
+            .d {
+                padding-top: 50px;
+                padding-right: 50px;
+                padding-bottom: 5px;
+            }
+            .e {
+                width: 500px;
+                margin:auto;
+                padding: 20px;
+            }
+            .f {
+                padding-top: -80px;
+                padding-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="a">
+            This is div (a) has padding: 10px
+        </div>
+        <hr>
+        <div class="b">
+            This is div (b) has padding: 20px 30px;
+        </div>
+        <hr>
+        <div class="c">
+            This is div (c) has padding: 10px 20px 30px 40px;
+        </div>
+        <hr>
+        <div class="d">
+            This is div (d) has padding-top: 50px; padding-right: 50px; padding-bottom: 5px;
+        </div>
+        <hr>
+        <div class="e">
+            This is div (e) has width: 500px; margin:auto; padding:auto;
+            padding doesn't take auto value.
+        </div>
+        <hr>
+        <div class="f">
+            This is div (f) has padding: -80;
+            padding doesn't take negative value.
+        </div>
+        <hr>
+    </body>
+</html>
+
+<!--
+padding is an extra empty space sarrounding "inside" of the sides of an element.
+
+padding default value for most elements = 0px
+_____________________
+
+padding follows (a, v h, t h b, t r b l) rule:
+
+explained in margin and border lessons.
+_____________________
+
+we can also specify padding for one side only:
+padding-top: t px      = padding: t px 0 0 0
+padding-right: r px    = padding: 0 r px 0 0
+padding-bottom: b px   = padding: 0 0 b px 0
+padding-left: l px     = padding: 0 0 0 l px
+_____________________
+
+padding doesn't take auto value.
+padding doesn't take negative value.
+
+-->

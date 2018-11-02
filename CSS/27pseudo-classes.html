@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudo-classes & Pseudo-elements</title>
+        <style>
+            .letter::first-letter {
+                font-size: 40px;
+                font-weight: bold;
+                color: white;
+                background-color: red;
+                margin: 0 10px 0 0;
+                padding: 0 10px;
+                border-radius: 10px;
+            }
+            .line::first-line {
+                color: green;
+                font-weight: bold;
+            }
+            div {
+                border: 1px solid black;
+            }
+            h2:first-child {
+                color: red;
+            }
+            .content::before {
+                content: "this is (before) content from CSS";
+                color: blue;
+            }
+            .content::after {
+                content: "this is (after) content from CSS";
+                color: red;
+            }
+            .content {
+                margin: 20px;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="letter">The first letter of this paragraph is styled using pseudo-element (::first-letter) </p>
+        <hr>
+        <p class="line">
+            The first line of this paragraph is styled using pseudo-element (::first-line)
+            The first line of this paragraph is styled using pseudo-element (::first-line)
+            The first line of this paragraph is styled using pseudo-element (::first-line)
+            The first line of this paragraph is styled using pseudo-element (::first-line)
+            The first line of this paragraph is styled using pseudo-element (::first-line)
+            The first line of this paragraph is styled using pseudo-element (::first-line)
+        </p>
+        <hr>
+        <div>
+            <h2>this is a heading</h2>
+            <p>this is a paragraph</p>
+            <p>this is a paragraph</p>
+            <h2>this is a heading</h2>
+            <h2>this is a heading</h2>
+            <p>this is a paragraph</p>
+        </div>
+        <div>
+            <h2>this is a heading</h2>
+            <h2>this is a heading</h2>
+            <h2>this is a heading</h2>
+            <p>this is a paragraph</p>
+            <p>this is a paragraph</p>
+            <p>this is a paragraph</p>
+        </div>
+        <div>
+            <p>this is a paragraph</p>
+            <h2>this is a heading</h2>
+            <h2>this is a heading</h2>
+            <h2>this is a heading</h2>
+            <div>
+                <h2>this is a heading</h2>
+                <h2>this is a heading</h2>
+            </div>
+            <p>this is a paragraph</p>
+        </div>
+        <hr>
+        <div class="content">
+            this is a div from html
+        </div>
+    </body>
+</html>
+
+<!--
+Pseudo-elements: applies a special styling to a part of the element.
+(this part is either original "part of the element" or virtual "added by the Pseudo-elements")
+
+types:
+
+element::first-letter : turns the first letter of text inside the element into a block that can take any styling.
+
+element::first-line : for adding styling only to the first line of text inside an element.
+(on smaller screens, first line will be less portion of the text than on bigger screens,
+but always, what will be styled is the first line on the screen only, regardless how much is that portion of text)
+
+element:first-child : for adding styling only to the any first child of type element
+(the condition is that element must a first child to me styled)
+
+element:before : uses a special prperty "content" which adds a virtual content before the element.
+then any styling will only be applied to this virtual content.
+
+element:after : uses a special prperty "content" which adds a virtual content after the element.
+then any styling will only be applied to this virtual content.
+
+:before & :after are also useful to element float clearing,
+or adding and styling list bullets in special ways.
+____________________________________________
+
+any styling inside an elemnt will apply to it and to any pseudo-elements connected.
+but, any styling inside a pseudo-element will only apply to its content.
+____________________________________________
+
+Pseudo-classes: applies a special styling to an element while a condition is met.
+
+will go over them in CSS3
+-->

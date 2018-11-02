@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Font properties</title>
+        <style>
+            p.one {
+                font-family: tahoma;
+                font-style: normal;
+                font-size: 30px
+            }
+            span.smaller {
+                font-size: smaller;
+            }
+            p.three {
+                /*
+                ONE CODE
+                font: style weight size/line-height family
+                default values:
+                font: normal normal medium/normal (family)
+                since font-family has no default value it must be set or the complete code will not work
+                */
+                font: italic bold 20px/20px "times new roman", arial
+            }
+        </style>
+    </head>
+    <body>
+        <p class="one">This is our paragraph and this is a <span class="smaller">spanned part (child) with font-size set to smaller</span></p>
+
+        <p>
+            This is a paragraph explaining font-weights: <br>
+            <span style="font-weight:100">Amr 100</span> <br>
+            <span style="font-weight:200">Amr 200</span> <br>
+            <span style="font-weight:300">Amr 300</span> <br>
+            <span style="font-weight:400">Amr 400 or normal</span> <br>
+            <span style="font-weight:500">Amr 500</span> <br>
+            <span style="font-weight:600">Amr 600</span> <br>
+            <span style="font-weight:700">Amr 700 or bold</span> <br>
+            <span style="font-weight:800">Amr 800</span> <br>
+            <span style="font-weight:900">Amr 900</span> <br>
+            <span style="font-weight:lighter">Amr lighter than the parent</span> <br>
+            <span style="font-weight:bolder">Amr bolder than the parent</span> <br>
+
+        </p>
+        <p class="three">
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+            This is our paragraph
+        </p>
+    </body>
+</html>
+
+<!--
+font properties:
+
+font-family:
+default value depends on the browser.
+when writing a multiple-word font, it must be in qutation marks (single or double). Arial, Tahoma, "Times New Roman"
+
+font-family value must be supported with a fall-back system. (font-family: Tahoma, "Times New Roman";)
+which is writing multiple values and not just one so that when the browser can't recognize the first value it goes to the next.
+instead of using a fall-back system we can use (web-safe fonts) that usually exist on anyone's device.
+"or we can use both fall-back and web-safe fonts to be super safe."
+
+we can also transform a font to be a (web-font) which will exist on my webpage and not user's device,
+and will be displayed to the user regardless if he has it on his device or not.
+_____________________
+
+font-style:
+default value is normal.
+other values: italic: equivalent to old <i></i> tags.
+              oblique: similar to italic (look up the difference)
+_____________________
+
+font-size:
+default value is medium (= 16px).
+we usually set the size in pixels but we can also use:
+(xx-small, x-small, small, medium, large, x-large, xx-large) not usually used anymore
+or (smaller, larger) relative to the font-size of the parent.
+or other measurement units ( Pixel/Point/Em/Rem/Percent ). for more about them:
+https://www.youtube.com/watch?annotation_id=annotation_3146617489&feature=iv&src_vid=n48ICr4QvnQ&v=Rm4xUs5zy4E
+_____________________
+
+font-weight:
+default value is normal.
+other values:
+bold: the most famous usage.
+or (smaller, larger) relative to the font-weight of the parent.
+or for more precisiom: (100, 200, 300, 400, 500, 600, 700, 800, 900) and the difference only appears in some fonts.
+400 = normal, 700 = bold
+_____________________
+
+ONE CODE FOR ALL FONT PROPERTIES??
+
+font: style weight size/line-height family
+-->

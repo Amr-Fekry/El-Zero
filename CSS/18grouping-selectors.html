@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Grouping selectors</title>
+        <style>
+            .one, .two, .three {
+                color: white;
+                padding: 10px;
+                margin: 10px;
+                width: 300px;
+                float: left
+            }
+            .one {
+                background-color: red;
+            }
+            .two {
+                background-color: green;
+            }
+            .three {
+                background-color: blue;
+            }
+
+            h1, span, .a {
+                color: red;
+                font-weight: bold;
+            }
+            .a {
+                border: 1px solid red;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="one">
+            This is div one
+        </div>
+        <div class="two">
+            This is div two
+        </div>
+        <div class="three">
+            This is div three
+        </div>
+
+        <div style="clear:both"></div>
+
+        <hr>
+
+        <h1>Grouping</h1>
+        <p>this is a paragraph to describe <span>grouping</span></p>
+        <div class="a">
+            this is a div about grouping
+        </div>
+    </body>
+</html>
+
+<!--
+Grouping selectors save time when writing code and when maintaining it and makes the code look better.
+-->

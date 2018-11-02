@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Mouse Cursor</title>
+        <style>
+            div {
+                background: #DDD;
+                padding: 10px;
+                margin: 10px;
+                float: left;
+            }
+            .cur1 {
+                cursor: text;
+            }
+            .cur2 {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            normal cursors in this div:
+            <br>
+            <a href="https://wwww.google.com">Google</a>
+            <span>This is a span</span>
+        </div>
+        <div>
+            crazy cursors in this div:
+            <br>
+            <a class="cur1" href="https://wwww.google.com">Google</a>
+            <span class="cur2">This is a span</span>
+        </div>
+    </body>
+</html>
+
+<!--
+mouse cursor takes different shapes automatically when hovering over different elements.
+in a webpage, cursor default value: auto: we let the browser give the value automatically according to standards.
+
+but we can also control it.
+cursor has plenty of values. explore them using the editor.
+or visit: https://codepen.io/chriscoyier/pen/uCwfB 
+-->
